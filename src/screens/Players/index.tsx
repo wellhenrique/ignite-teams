@@ -10,7 +10,7 @@ import { Filter } from '@components/Filter'
 import { Button } from '@components/Button'
 import { Input } from '@components/Input'
 
-import { Container, Form, HeaderList, NumbersOfPlayers } from './styles'
+import { Container, Form, HeaderList, NumberOfPlayers } from './styles'
 
 export default function Players() {
   const [team, setTeam] = useState('Time A')
@@ -44,7 +44,7 @@ export default function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
+        <NumberOfPlayers>{players.length}</NumberOfPlayers>
       </HeaderList>
 
       <FlatList
