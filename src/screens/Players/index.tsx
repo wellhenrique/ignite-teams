@@ -12,7 +12,7 @@ import { Input } from '@components/Input'
 
 import { Container, Form, HeaderList, NumberOfPlayers } from './styles'
 
-export default function Players() {
+export function Players() {
   const [team, setTeam] = useState('Time A')
   const [players, setPlayers] = useState([])
 
