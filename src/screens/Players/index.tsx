@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { FlatList } from 'react-native'
 
+import { useRoute } from '@react-navigation/native'
+
+import { RoutePlayersParams } from 'src/@types/navigation'
+
 import { PlayersCard } from '@components/PlayersCard'
 import { ButtonIcon } from '@components/ButtonIcon'
 import { Highlight } from '@components/Highlight'
@@ -16,12 +20,15 @@ export function Players() {
   const [team, setTeam] = useState('Time A')
   const [players, setPlayers] = useState([])
 
+  const route = useRoute()
+  const { group } = route.params as RoutePlayersParams
+
   return (
     <Container>
       <Header showBackButton />
 
       <Highlight
-        title="Nome da turma"
+        title={group}
         subtitle='"Adicione a galera e separe os times'
       />
 

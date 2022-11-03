@@ -15,7 +15,7 @@ export function Groups() {
   const [groups, setGroups] = useState<string[]>([])
   const navigation = useNavigation()
 
-  function handleNewGroup() {
+  function handleCreateNewGroup() {
     navigation.navigate('newGroup')
   }
 
@@ -35,7 +35,7 @@ export function Groups() {
         showsVerticalScrollIndicator={false}
       />
 
-      <Button title="Criar nova turma" onPress={handleNewGroup} />
+      <Button title="Criar nova turma" onPress={handleCreateNewGroup} />
     </Container>
   )
 }
