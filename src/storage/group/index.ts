@@ -16,7 +16,7 @@ export async function groupCreate(newGroupName: string) {
 export async function groupsGetAll() {
   try {
     const storage = await AsyncStorage.getItem(GROUP_COLLECTION)
-    const groups: string = storage ? JSON.parse(storage) : ''
+    const groups: string [] = storage ? JSON.parse(storage) : ''
 
     return groups
   } catch (error) {
