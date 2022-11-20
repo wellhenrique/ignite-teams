@@ -14,6 +14,7 @@ export async function groupCreate(newGroupName: string) {
 
     const storage: string = JSON.stringify([...storagedGroups, newGroupName])
     await AsyncStorage.setItem(GROUP_COLLECTION, storage)
+    
   } catch (error) {
     throw error
   }
