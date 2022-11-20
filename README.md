@@ -1,1 +1,1 @@
-# ignite-teams
+# ignite-teams-app
